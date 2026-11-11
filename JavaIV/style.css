@@ -1,0 +1,107 @@
+/* Rregullimi i pergjithshem */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #eef3f8;
+    color: #14283f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/* Faqja kryesore */
+.faqja {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Titulli kryesor */
+h1 {
+    color: #174a7e;
+    font-size: 28px;
+    margin: 0 0 24px;
+}
+
+.faqja > p {
+    margin: 0 0 18px;
+}
+
+/* Organizimi i kartelave */
+.kartelat {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+/* Dizajni i kartelave */
+.kartela {
+    background-color: white;
+    border: 1px solid #bac7d5;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-wrap: anywhere;
+}
+
+/* Titujt e kartelave */
+.kartela h2,
+.kuti h2 {
+    font-size: 20px;
+    margin: 0 0 20px;
+}
+
+/* Grupi 1, Grupi 2, Grupi 3 */
+.etiketa {
+    color: #174a7e;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+/* Pershkrimi i aktiviteteve */
+.kartela p:not(.etiketa) {
+    line-height: 1.5;
+    margin: 0 0 16px;
+}
+
+/* Butoni Me shume */
+.buton {
+    display: inline-block;
+    padding: 12px 16px;
+    background-color: #174a7e;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Efekti kur kalojme me maus */
+.buton:hover {
+    background-color: #0f355c;
+}
+
+/* Efekti kur zgjedhim butonin me tastiere */
+.buton:focus-visible {
+    outline: 3px solid #e1a626;
+    outline-offset: 3px;
+}
+
+/* Seksioni Informata */
+.kuti {
+    background-color: white;
+    border: 1px solid #bac7d5;
+    padding: 20px;
+}
+
+.kuti p {
+    margin: 0 0 18px;
+    line-height: 1.5;
+}
+
+/* Pershtatja per ekrane me te medha */
+@media (min-width: 700px) {
+    .kartelat {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
